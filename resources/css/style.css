@@ -61,7 +61,7 @@ h2 {
 }
 
 footer {
-  background-color: #343a40;
+  background-color: #00674f;
   color: #fff;
 }
 
@@ -108,46 +108,4 @@ footer a:hover {
 .new-customer a:hover {
   color: red;
   text-decoration: none;
-}
-
-.form-box {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  background-image: url("../images/bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-}
-
-.form-signin {
-  width: 100%;
-  max-width: 500px;
-  padding: 15px;
-  margin: auto;
-}
-.form-signin .checkbox {
-  font-weight: 400;
-}
-.form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
