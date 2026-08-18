@@ -921,6 +921,56 @@ section {
 }
 
 /* -----------------------------------------
+   RSVP CONTACTS
+   ----------------------------------------- */
+.rsvp-contacts {
+  background: var(--light-gold);
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin: 1.2rem 0;
+  border-left: 3px solid var(--primary-gold);
+}
+
+.rsvp-contacts p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.6rem;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.95rem;
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.contact-item i {
+  color: var(--primary-gold);
+  font-size: 0.9rem;
+  width: 16px;
+}
+
+.contact-item a {
+  color: var(--primary-green);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-item a:hover {
+  color: var(--primary-gold);
+}
+
+/* -----------------------------------------
    FOOTER
    ----------------------------------------- */
 footer {
