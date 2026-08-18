@@ -410,6 +410,169 @@ section {
 }
 
 /* -----------------------------------------
+   SCRIPTURE VERSE SECTION
+   ----------------------------------------- */
+.verse-section {
+  position: relative;
+  padding: 7rem 2rem;
+  text-align: center;
+  overflow: hidden;
+  /* Unique "three strands" background */
+  background:
+    /* Strand 1 - left diagonal */
+    repeating-linear-gradient(
+      75deg,
+      transparent,
+      transparent 40px,
+      rgba(178, 133, 56, 0.08) 40px,
+      rgba(178, 133, 56, 0.08) 42px,
+      transparent 42px,
+      transparent 80px
+    ),
+    /* Strand 2 - center vertical */
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 60px,
+      rgba(178, 133, 56, 0.06) 60px,
+      rgba(178, 133, 56, 0.06) 62px,
+      transparent 62px,
+      transparent 100px
+    ),
+    /* Strand 3 - right diagonal */
+    repeating-linear-gradient(
+      -75deg,
+      transparent,
+      transparent 50px,
+      rgba(178, 133, 56, 0.08) 50px,
+      rgba(178, 133, 56, 0.08) 52px,
+      transparent 52px,
+      transparent 90px
+    ),
+    /* Soft gold glow from center */
+    radial-gradient(ellipse at center, rgba(178,133,56,0.15) 0%, transparent 70%),
+    /* Deep green base */
+    linear-gradient(160deg, #004d3a 0%, #00674f 40%, #005a44 100%);
+  background-attachment: fixed;
+}
+
+/* Corner ornaments */
+.verse-section::before,
+.verse-section::after {
+  content: '❦';
+  position: absolute;
+  font-size: 4rem;
+  color: var(--primary-gold);
+  opacity: 0.15;
+}
+
+.verse-section::before { top: 2rem; left: 3rem; }
+.verse-section::after { bottom: 2rem; right: 3rem; transform: rotate(180deg); }
+
+.verse-container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.verse-icon {
+  display: inline-flex;
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--primary-gold);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  color: var(--primary-gold);
+  font-size: 1.8rem;
+  opacity: 0.9;
+  animation: gentlePulse 3s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50%       { transform: scale(1.05); opacity: 1; }
+}
+
+.verse-quote-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 6rem;
+  color: var(--primary-gold);
+  opacity: 0.2;
+  line-height: 0.5;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.verse-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--white);
+  line-height: 2;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.verse-text::before,
+.verse-text::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  background: var(--primary-gold);
+  opacity: 0.4;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.verse-text::before { top: -1rem; }
+.verse-text::after { bottom: -1rem; }
+
+.verse-ref {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: var(--primary-gold);
+  display: block;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  opacity: 0.95;
+}
+
+/* Three strand decorative lines */
+.verse-strands {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1.5rem;
+  opacity: 0.5;
+}
+
+.verse-strands span {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--primary-gold);
+  border-radius: 1px;
+}
+
+.verse-strands span:nth-child(1) { transform: rotate(-8deg); }
+.verse-strands span:nth-child(2) { transform: rotate(0deg); opacity: 0.8; }
+.verse-strands span:nth-child(3) { transform: rotate(8deg); }
+
+@media (max-width: 768px) {
+  .verse-section { padding: 5rem 1.5rem; }
+  .verse-text { font-size: 1.3rem; }
+  .verse-ref { font-size: 1.6rem; }
+  .verse-section::before,
+  .verse-section::after { font-size: 2.5rem; }
+}
+
+/* -----------------------------------------
    BRIDAL PARTY
    ----------------------------------------- */
 .bridal-section {
