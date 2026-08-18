@@ -279,7 +279,7 @@ section {
 }
 
 .story-carousel {
-  max-width: 400px;
+  max-width: 320px;
   margin: 0 auto 3rem;
   border-radius: 50%;
   overflow: hidden;
@@ -289,7 +289,7 @@ section {
 
 .story-carousel img {
   width: 100%;
-  height: 600px;
+  height: 450px;
   object-fit: cover;
   transition: transform 0.6s ease;
 }
