@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prince & Juilisa — Wedding Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold:   #b28538;
+      --green:  #00674f;
+      --ink:    #2c2c2c;
+      --paper:  #ffffff;
+      --cream:  #f9f5ee;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      font-family: 'Alegreya Sans', sans-serif;
+    }
+
+    /* ---------- The Card ---------- */
+    .invite-card {
+      background: var(--paper);
+      max-width: 520px;
+      width: 100%;
+      padding: 3.5rem 2.5rem;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08), 0 0 0 1px rgba(178,133,56,0.12);
+      text-align: center;
+      color: var(--ink);
+    }
+
+    /* Inner frame */
+    .invite-card::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(178,133,56,0.18);
+      pointer-events: none;
+    }
+
+    /* Ornament */
+    .invite-ornament {
+      color: var(--gold);
+      font-size: 1.2rem;
+      opacity: 0.6;
+      margin-bottom: 1.5rem;
+      letter-spacing: 6px;
+    }
+
+    /* Names */
+    .invite-names {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.2rem;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+    }
+
+    .invite-names .ampersand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--gold);
+      display: block;
+      margin: 0.2rem 0;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    /* Divider */
+    .invite-divider {
+      width: 70px;
+      height: 1px;
+      background: var(--gold);
+      margin: 1.5rem auto;
+      opacity: 0.5;
+      position: relative;
+    }
+    .invite-divider::after {
+      content: '❦';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--gold);
+      font-size: 0.8rem;
+      background: var(--paper);
+      padding: 0 8px;
+    }
+
+    /* Body text */
+    .invite-body {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    /* Events */
+    .event { margin-bottom: 1.8rem; }
+    .event:last-of-type { margin-bottom: 0; }
+
+    .event-type {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--green);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .event-date {
+      font-size: 0.9rem;
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 0.3rem;
+    }
+
+    .event-time {
+      font-size: 0.85rem;
+      color: #777;
+      margin-bottom: 0.4rem;
+    }
+
+    .event-venue {
+      font-size: 0.9rem;
+      color: #444;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* RSVP */
+    .rsvp-strip {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(178,133,56,0.2);
+    }
+
+    .rsvp-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .rsvp-contact {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.35rem;
+    }
+    .rsvp-contact strong { color: var(--ink); font-weight: 700; }
+    .rsvp-contact a {
+      color: var(--green);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .rsvp-contact a:hover { color: var(--gold); }
+
+    /* Hashtag */
+    .hashtag {
+      margin-top: 1.5rem;
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.4rem;
+      color: var(--gold);
+      opacity: 0.85;
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      .invite-card { padding: 2.5rem 1.5rem; }
+      .invite-names { font-size: 2.6rem; }
+      .invite-body { font-size: 0.8rem; letter-spacing: 1px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="invite-card">
+    <div class="invite-ornament">❦ &nbsp;&nbsp; ❦ &nbsp;&nbsp; ❦</div>
+
+    <h1 class="invite-names">
+      Prince Ansah Som
+      <span class="ampersand">&amp;</span>
+      Juilisa Arhin
+    </h1>
+
+    <div class="invite-divider"></div>
+
+    <p class="invite-body">
+      Request the pleasure of your company<br>
+      as they exchange their marriage vows
+    </p>
+
+    <div class="event">
+      <p class="event-type">Engagement Ceremony</p>
+      <p class="event-date">Friday, 25th September 2026</p>
+      <p class="event-time">10:00 in the morning</p>
+      <p class="event-venue">Samuel Brewu's Residence</p>
+    </div>
+
+    <div class="event">
+      <p class="event-type">Wedding Ceremony</p>
+      <p class="event-date">Saturday, 26th September 2026</p>
+      <p class="event-time">One o'clock in the afternoon</p>
+      <p class="event-venue">PCG — Hope Congregation, Sakumono Estates</p>
+    </div>
+
+    <div class="rsvp-strip">
+      <p class="rsvp-label">RSVP</p>
+      <p class="rsvp-contact">
+        <strong>Selorm</strong> — <a href="tel:+233549683191">0549 683 191</a>
+      </p>
+      <p class="rsvp-contact">
+        <strong>Benedicta</strong> — <a href="tel:+233546268396">0546 268 396</a>
+      </p>
+    </div>
+
+    <p class="hashtag">#becomingaweSOM...</p>
+  </div>
+
+</body>
+</html>
