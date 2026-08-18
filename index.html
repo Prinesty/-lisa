@@ -57,7 +57,31 @@
       <h1>Prince & Juilisa</h1>
       <p class="subtitle">Eccl. 4: 9-12</p>
       <p class="date">September 25th & 26th, 2026</p>
-      <a class="btn btn-elegant btn-lg" href="#ceremony" role="button">RSVP</a>
+
+      <!-- Countdown Timer -->
+      <div class="countdown-bar" id="countdown">
+        <div class="countdown-item">
+          <span class="number" id="days">00</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-item">
+          <span class="number" id="hours">00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-item">
+          <span class="number" id="minutes">00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-item">
+          <span class="number" id="seconds">00</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
+
+      <button class="btn btn-elegant btn-lg" onclick="openModal('rsvpModal')" role="button">RSVP</button>
     </div>
   </header>
 
@@ -107,7 +131,7 @@
             <a href="https://maps.app.goo.gl/DVQ8ZmgcmtJkbVa6A" target="_blank">GET DIRECTIONS <i class="fas fa-external-link-alt"></i></a>
             <p class="date-time">Friday, 25th September, 2026</p>
             <p class="date-time">Starts at 10:00 AM</p>
-            <a class="btn btn-elegant" href="#" role="button">Learn More</a>
+            <button class="btn btn-elegant" onclick="openModal('inviteModal')" role="button">Learn More</button>
           </div>
         </div>
         <div class="col-md-6 reveal">
@@ -117,7 +141,7 @@
             <a href="https://maps.app.goo.gl/1zDrip4KmBqWB3HH8" target="_blank">GET DIRECTIONS <i class="fas fa-external-link-alt"></i></a>
             <p class="date-time">Saturday, 26th September, 2026</p>
             <p class="date-time">Arrive by 12:30 PM — Service begins at 1:00 PM</p>
-            <a class="btn btn-elegant" href="#" role="button">The Program</a>
+            <button class="btn btn-elegant" onclick="openModal('inviteModal')" role="button">The Program</button>
           </div>
         </div>
       </div>
@@ -205,12 +229,170 @@
     </div>
   </footer>
 
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- RSVP Modal -->
+  <div class="modal-overlay" id="rsvpModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('rsvpModal')">&times;</button>
+      <div class="modal-header">
+        <h3>We'd Love to Hear From You</h3>
+        <div class="dash"></div>
+        <p class="modal-subtitle">Please let us know if you'll be joining our celebration</p>
+      </div>
+      <form id="rsvpForm" onsubmit="handleRsvp(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" id="rsvpFirstName" placeholder="Your first name" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="rsvpLastName" placeholder="Your last name" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="rsvpEmail" placeholder="your@email.com" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Will You Attend?</label>
+            <select id="rsvpAttendance" required>
+              <option value="">Select...</option>
+              <option value="yes">Joyfully Accept</option>
+              <option value="no">Regretfully Decline</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Number of Guests</label>
+            <select id="rsvpGuests">
+              <option value="1">Just Me</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Dietary Requirements <span class="optional">(Optional)</span></label>
+          <textarea id="rsvpDietary" rows="2" placeholder="Any allergies or special meal requests?"></textarea>
+        </div>
+        <div class="form-group">
+          <label>A Message for the Couple <span class="optional">(Optional)</span></label>
+          <textarea id="rsvpMessage" rows="2" placeholder="Share your warm wishes..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send RSVP</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Invitation-Only Modal -->
+  <div class="modal-overlay" id="inviteModal">
+    <div class="modal-box modal-box--centered">
+      <button class="modal-close" onclick="closeModal('inviteModal')">&times;</button>
+      <div class="modal-header">
+        <h3>A Gentle Note</h3>
+        <div class="dash"></div>
+      </div>
+      <div class="invitation-message">
+        <span class="invitation-icon"><i class="fas fa-envelope-open-text"></i></span>
+        <p>We would be absolutely delighted to celebrate this precious day with each and every one of you. However, to ensure an intimate and well-organised gathering, this event is <strong>strictly by invitation</strong>.</p>
+        <p>If you have received an invitation, we cannot wait to see you. If not, please know that you are in our hearts, and we hope to celebrate with you in another beautiful moment.</p>
+        <p class="invitation-signature">With love, <br>Prince & Juilisa</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RSVP Success Modal -->
+  <div class="modal-overlay" id="rsvpSuccessModal">
+    <div class="modal-box modal-box--centered">
+      <button class="modal-close" onclick="closeModal('rsvpSuccessModal')">&times;</button>
+      <div class="invitation-message">
+        <span class="invitation-icon" style="color: #00674f;"><i class="fas fa-heart"></i></span>
+        <p style="font-size: 1.3rem; color: var(--primary-green); font-family: 'Playfair Display', serif;">Thank you!</p>
+        <p>Your RSVP has been received. We are so grateful you took the time to respond, and we look forward to celebrating with you.</p>
+        <p class="invitation-signature">Prince & Juilisa</p>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script>
-    // Scroll Reveal Animation
+    // ==================== MODAL SYSTEM ====================
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close modal when clicking outside the box
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeModal(overlay.id);
+      });
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(m => closeModal(m.id));
+      }
+    });
+
+    // ==================== RSVP HANDLER ====================
+    function handleRsvp(event) {
+      event.preventDefault();
+      // In production, send this data to your backend
+      const data = {
+        firstName: document.getElementById('rsvpFirstName').value,
+        lastName: document.getElementById('rsvpLastName').value,
+        email: document.getElementById('rsvpEmail').value,
+        attendance: document.getElementById('rsvpAttendance').value,
+        guests: document.getElementById('rsvpGuests').value,
+        dietary: document.getElementById('rsvpDietary').value,
+        message: document.getElementById('rsvpMessage').value
+      };
+      console.log('RSVP Data:', data);
+      closeModal('rsvpModal');
+      document.getElementById('rsvpForm').reset();
+      setTimeout(() => openModal('rsvpSuccessModal'), 300);
+    }
+
+    // ==================== COUNTDOWN TIMER ====================
+    function updateCountdown() {
+      const weddingDate = new Date('2026-09-26T13:00:00').getTime();
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      if (distance < 0) {
+        document.getElementById('countdown').innerHTML =
+          '<div class="countdown-item"><span class="number" style="font-size:1.5rem;">We are married! <i class="fas fa-heart"></i></span></div>';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ==================== SCROLL REVEAL ====================
     const reveals = document.querySelectorAll('.reveal');
     const revealOnScroll = () => {
       reveals.forEach(el => {
