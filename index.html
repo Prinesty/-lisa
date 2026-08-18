@@ -251,7 +251,7 @@
 
   <!-- ==================== MODALS ==================== -->
 
-  <!-- RSVP Modal -->
+    <!-- RSVP Modal -->
   <div class="modal-overlay" id="rsvpModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('rsvpModal')">&times;</button>
@@ -260,6 +260,26 @@
         <div class="dash"></div>
         <p class="modal-subtitle">Please let us know if you'll be joining our celebration</p>
       </div>
+
+      <!-- Contact Details -->
+      <div class="rsvp-contacts">
+        <p>Kindly reach out to us for any enquiries or to confirm your attendance:</p>
+        <div class="contact-list">
+          <div class="contact-item">
+            <i class="fas fa-user"></i>
+            <span>Selorm</span>
+            <span style="color:#aaa; margin:0 4px;">|</span>
+            <a href="tel:+233549683191"><i class="fas fa-phone-alt" style="font-size:0.8rem;"></i> 0549683191</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-user"></i>
+            <span>Benedicta</span>
+            <span style="color:#aaa; margin:0 4px;">|</span>
+            <a href="tel:+233546268396"><i class="fas fa-phone-alt" style="font-size:0.8rem;"></i> 0546268396</a>
+          </div>
+        </div>
+      </div>
+
       <form id="rsvpForm" onsubmit="handleRsvp(event)">
         <div class="form-row">
           <div class="form-group">
