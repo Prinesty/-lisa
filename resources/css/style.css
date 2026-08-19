@@ -461,13 +461,13 @@ section {
 .verse-section::after {
   content: '❦';
   position: absolute;
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--primary-gold);
   opacity: 0.15;
 }
 
-.verse-section::before { top: 2rem; left: 3rem; }
-.verse-section::after { bottom: 2rem; right: 3rem; transform: rotate(180deg); }
+.verse-section::before { top: 1rem; left: 3rem; }
+.verse-section::after { bottom: 1rem; right: 3rem; transform: rotate(180deg); }
 
 .verse-container {
   position: relative;
@@ -486,7 +486,7 @@ section {
   justify-content: center;
   margin: 0 auto 2rem;
   color: var(--primary-gold);
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   opacity: 0.9;
   animation: gentlePulse 3s ease-in-out infinite;
 }
