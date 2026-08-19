@@ -496,15 +496,6 @@ section {
   50%       { transform: scale(1.05); opacity: 1; }
 }
 
-.verse-quote-mark {
-  font-family: 'Playfair Display', serif;
-  font-size: 6rem;
-  color: var(--primary-gold);
-  opacity: 0.2;
-  line-height: 0.5;
-  display: block;
-  margin-bottom: 1rem;
-}
 
 .verse-text {
   font-family: 'Playfair Display', serif;
