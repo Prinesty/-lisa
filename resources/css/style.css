@@ -79,22 +79,22 @@ body {
 /* -----------------------------------------
    HERO / JUMBOTRON
    ----------------------------------------- */
-.jumbotron {
-  background: linear-gradient(135deg, rgba(0,103,79,0.88) 0%, rgba(0,60,45,0.92) 100%),
-              url("../images/test.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--white);
-  position: relative;
-  margin-bottom: 0;
-  border-radius: 0;
-}
+   .jumbotron {
+     background: linear-gradient(135deg, rgba(0,103,79,0.45) 0%, rgba(0,60,45,0.55) 100%),
+                 url("../images/test.jpeg");
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     color: var(--white);
+     position: relative;
+     margin-bottom: 0;
+     border-radius: 0;
+   }
 
 .jumbotron::before {
   content: '❦';
