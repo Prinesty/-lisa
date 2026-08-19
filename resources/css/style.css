@@ -536,7 +536,7 @@ section {
 .verse-text::after { bottom: -1rem; }
 
 .verse-ref {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.2rem;
   color: var(--primary-gold);
   display: block;
