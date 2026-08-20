@@ -727,6 +727,102 @@ section {
 }
 
 /* -----------------------------------------
+   RSVP SECTION
+   ----------------------------------------- */
+.rsvp-section {
+  background: var(--light-gold);
+  padding: 5rem 0;
+}
+
+.rsvp-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  color: #777;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.rsvp-contact-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  margin: 1rem 0;
+  border: 1px solid rgba(178,133,56,0.15);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.rsvp-contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  border-color: rgba(178,133,56,0.3);
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--primary-gold);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  color: var(--primary-gold);
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.rsvp-contact-card:hover .contact-icon {
+  background: var(--primary-gold);
+  color: var(--white);
+}
+
+.rsvp-contact-card h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--primary-green);
+  margin-bottom: 0.6rem;
+}
+
+.contact-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--primary-gold);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+}
+
+.contact-number:hover {
+  color: var(--primary-green);
+  background: var(--light-gold);
+  text-decoration: none;
+}
+
+.contact-number i {
+  font-size: 0.85rem;
+  margin-right: 0.4rem;
+}
+
+.rsvp-note {
+  font-size: 0.95rem;
+  color: #888;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+}
+
+@media (max-width: 768px) {
+  .rsvp-contact-card { padding: 2rem 1.5rem; }
+  .rsvp-contact-card h5 { font-size: 1.3rem; }
+  .contact-number { font-size: 1rem; }
+}
+
+/* -----------------------------------------
    MODALS
    ----------------------------------------- */
 .modal-overlay {
