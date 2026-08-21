@@ -92,7 +92,7 @@ body {
    ----------------------------------------- */
    .jumbotron {
      background: linear-gradient(135deg, rgba(0,103,79,0.45) 0%, rgba(0,60,45,0.55) 100%),
-                 url("../images/test.jpeg");
+                 url("../images/test.jpg");
      background-size: cover;
      background-position: center;
      background-attachment: fixed;
