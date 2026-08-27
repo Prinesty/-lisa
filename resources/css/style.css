@@ -775,7 +775,7 @@ section {
   .gallery-item--featured {
     grid-column: span 2;   /* Full width */
     grid-row: span 1;      /* Only 1 row tall on mobile */
-    max-height: 280px;     /* Cap the height */
+    max-height: 500px;     /* Cap the height */
   }
 }
 
