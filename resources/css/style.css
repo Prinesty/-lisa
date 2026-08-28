@@ -662,6 +662,69 @@ section {
 }
 
 /* -----------------------------------------
+   DRESS CODE COLOUR PALETTE
+   ----------------------------------------- */
+.color-palette {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.palette-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.palette-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  border: 2px solid rgba(255,255,255,0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.palette-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.palette-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  color: var(--dark-text);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.palette-code {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 0.75rem;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+.palette-divider {
+  width: 1px;
+  height: 50px;
+  background: var(--primary-gold);
+  opacity: 0.4;
+}
+
+@media (max-width: 480px) {
+  .color-palette { gap: 1rem; }
+  .palette-circle { width: 55px; height: 55px; }
+  .palette-name { font-size: 0.75rem; }
+  .palette-code { font-size: 0.7rem; }
+  .palette-divider { height: 40px; }
+}
+
+/* -----------------------------------------
    GALLERY
    ----------------------------------------- */
 .gallery-section {
