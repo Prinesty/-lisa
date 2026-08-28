@@ -143,7 +143,7 @@
             <a href="https://maps.app.goo.gl/1zDrip4KmBqWB3HH8" target="_blank">GET DIRECTIONS <i class="fas fa-external-link-alt"></i></a>
             <p class="date-time">Saturday, 26th September, 2026</p>
             <p class="date-time">Arrive by 12:30 PM — Service begins at 1:00 PM</p>
-            <a class="btn btn-elegant" href="https://canva.link/e9qtt0frssapy2v" target="_blank" role="button">The Program</a>
+            <a class="btn btn-elegant" href="https://canva.link/e9qtt0frssapy2v" target="_blank" role="button">Wedding Program</a>
           </div>
         </div>
         <!-- Reception -->
@@ -154,6 +154,7 @@
             <a href="https://maps.app.goo.gl/tVaegei8QwEYDGoN8?g_st=aw" target="_blank">GET DIRECTIONS <i class="fas fa-external-link-alt"></i></a>
             <p class="date-time">Saturday, 26th September, 2026</p>
             <p class="date-time">Starts at 5:00 PM</p>
+            <button class="btn btn-elegant" onclick="openModal('orderModal')" role="button">Reception Programme</button>
           </div>
         </div>
       </div>
@@ -335,6 +336,55 @@
         <p>We would be absolutely delighted to celebrate this precious day with each and every one of you. However, to ensure an intimate and well-organised gathering, <strong>the engagement is strictly by invitation</strong>.</p>
         <p>If you have received an invitation, we cannot wait to see you.</p>
         <p class="invitation-signature">With love, <br>Prince & Juilisa</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- Order of the Evening Modal -->
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal-box modal-box--centered">
+      <button class="modal-close" onclick="closeModal('orderModal')">&times;</button>
+      <div class="modal-header">
+        <h3>Order of the Evening</h3>
+        <div class="dash"></div>
+      </div>
+      <div class="order-timeline">
+        <div class="order-item">
+          <div class="order-icon"><i class="fas fa-glass-cheers"></i></div>
+          <span class="order-text">Cocktail Hour</span>
+        </div>
+        <div class="order-item">
+          <div class="order-icon"><i class="fas fa-door-open"></i></div>
+          <span class="order-text">Grand Entrance</span>
+        </div>
+        <div class="order-item">
+          <div class="order-icon"><i class="fas fa-heart"></i></div>
+          <span class="order-text">First Dance</span>
+        </div>
+        <div class="order-item">
+          <div class="order-icon"><i class="fas fa-utensils"></i></div>
+          <span class="order-text">Dinner</span>
+        </div>
+        <div class="order-item">
+          <div class="order-icon"><i class="fas fa-microphone"></i></div>
+          <span class="order-text">Toasts</span>
+        </div>
+        <div class="order-item">
+          <div class="order-icon"><i class="fas fa-users"></i></div>
+          <span class="order-text">Opening Dance</span>
+        </div>
+        <div class="order-item">
+          <div class="order-icon"><i class="fas fa-birthday-cake"></i></div>
+          <span class="order-text">Cake Cutting</span>
+        </div>
+        <div class="order-item">
+          <div class="order-icon"><i class="fas fa-music"></i></div>
+          <span class="order-text">Last Dance</span>
+        </div>
+        <div class="order-item">
+          <div class="order-icon"><i class="fas fa-car"></i></div>
+          <span class="order-text">Wedding Exit</span>
+        </div>
       </div>
     </div>
   </div>
