@@ -491,6 +491,58 @@ section {
 }
 
 /* -----------------------------------------
+   ORDER OF THE EVENING — SPECIAL ROLES
+   ----------------------------------------- */
+.order-roles {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(178, 133, 56, 0.2);
+}
+
+.role-block {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.role-block:last-child {
+  margin-bottom: 0;
+}
+
+.role-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-green);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.role-label i {
+  color: var(--primary-gold);
+  font-size: 0.9rem;
+  width: 18px;
+  text-align: center;
+}
+
+.role-names {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #555;
+  line-height: 1.7;
+  padding-left: 1.6rem;
+}
+
+@media (max-width: 420px) {
+  .role-names { font-size: 0.85rem; }
+  .role-label { font-size: 0.8rem; }
+}
+
+/* -----------------------------------------
    SCRIPTURE VERSE SECTION
    ----------------------------------------- */
 .verse-section {
