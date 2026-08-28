@@ -421,6 +421,76 @@ section {
 }
 
 /* -----------------------------------------
+   ORDER OF THE EVENING — TIMELINE
+   ----------------------------------------- */
+.order-timeline {
+  position: relative;
+  padding-left: 10px;
+  margin-top: 0.5rem;
+}
+
+/* Vertical gold line */
+.order-timeline::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 10px;
+  bottom: 10px;
+  width: 1.5px;
+  background: var(--primary-gold);
+  opacity: 0.35;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.1rem;
+  position: relative;
+}
+
+.order-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Icon circle */
+.order-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--primary-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--white);
+  z-index: 2;
+  color: var(--primary-gold);
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.order-item:hover .order-icon {
+  background: var(--primary-gold);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+/* Event text */
+.order-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #444;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 420px) {
+  .order-text { font-size: 0.9rem; }
+  .order-icon { width: 32px; height: 32px; font-size: 0.75rem; }
+}
+
+/* -----------------------------------------
    SCRIPTURE VERSE SECTION
    ----------------------------------------- */
 .verse-section {
