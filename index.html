@@ -511,13 +511,13 @@
 
     // ==================== COUNTDOWN TIMER ====================
     function updateCountdown() {
-      const weddingDate = new Date('2026-09-26T13:00:00').getTime();
+      const weddingDate = new Date('2026-09-26T15:00:00').getTime();
       const now = new Date().getTime();
       const distance = weddingDate - now;
 
       if (distance < 0) {
         document.getElementById('countdown').innerHTML =
-          '<div class="countdown-item"><span class="number" style="font-size:1.5rem;">We are married! <i class="fas fa-heart"></i></span></div>';
+          '<div class="countdown-item"><span class="number" style="font-size:1.5rem;">We are officially aweSOM...! <i class="fas fa-heart"></i></span></div>';
         return;
       }
 
